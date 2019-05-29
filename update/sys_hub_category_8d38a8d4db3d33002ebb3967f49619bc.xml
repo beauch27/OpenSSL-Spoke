@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_hub_category">
+    <sys_hub_category action="INSERT_OR_UPDATE">
+        <name>Open SSL</name>
+        <order>100</order>
+        <sys_class_name>sys_hub_category</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 12:11:23</sys_created_on>
+        <sys_id>8d38a8d4db3d33002ebb3967f49619bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Open SSL</sys_name>
+        <sys_package display_value="Open SSL" source="x_snc_open_ssl">17a3e018dbf933002ebb3967f49619af</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name>sys_hub_category_8d38a8d4db3d33002ebb3967f49619bc</sys_update_name>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 12:11:23</sys_updated_on>
+    </sys_hub_category>
+    <sys_translated_text action="delete_multiple" query="documentkey=8d38a8d4db3d33002ebb3967f49619bc"/>
+</record_update>

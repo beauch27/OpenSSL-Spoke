@@ -1,0 +1,2034 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="Open SSL">8d38a8d4db3d33002ebb3967f49619bc</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <ih_action>true</ih_action>
+        <internal_name>check_ssl_certificate_expiration_date</internal_name>
+        <label_cache>[{"name":"{{action.url}}","label":"action➛url","type":"action","ref":""},{"name":"{{step[d7f26c6e-699e-4d79-b321-77e87422d0c5].output}}","label":"step➛SSH step➛Output","type":"step","ref":""}]</label_cache>
+        <latest_snapshot>74b4d91cdb7173002ebb3967f496197a</latest_snapshot>
+        <master_snapshot>f8b4d91cdb7173002ebb3967f49619b8</master_snapshot>
+        <name>Check SSL Certificate Expiration Date</name>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 12:11:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>b7482cd4db3d33002ebb3967f4961979</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Check SSL Certificate Expiration Date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Open SSL" source="x_snc_open_ssl">17a3e018dbf933002ebb3967f49619af</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_b7482cd4db3d33002ebb3967f4961979</sys_update_name>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=b7482cd4db3d33002ebb3967f4961979"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b7482cd4db3d33002ebb3967f4961979"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=b7482cd4db3d33002ebb3967f4961979^sys_idNOT IN3784951cdb7173002ebb3967f496190f,7f84951cdb7173002ebb3967f4961901"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Check SSL Certificate Expiration Date">b7482cd4db3d33002ebb3967f4961979</action>
+        <cid>b8a4dfff-3d93-41ee-92c6-e279a1c4e4aa</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>3784951cdb7173002ebb3967f496190f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=3784951cdb7173002ebb3967f496190f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>3784951cdb7173002ebb3967f496190f</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>3384951cdb7173002ebb3967f4961921</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>3784951cdb7173002ebb3967f496190f</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>f384951cdb7173002ebb3967f4961921</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+str = inputs.sshOut;
+stringDate = str.split('=').pop();
+//var date = new GlideDate('stringDate');
+//outputs.exparity = date
+outputs.exparity = str.split('=').pop();
+})(inputs, outputs);</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=3784951cdb7173002ebb3967f496190f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>3784951cdb7173002ebb3967f496190f</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>fb84951cdb7173002ebb3967f4961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>3784951cdb7173002ebb3967f496190f</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>bf84951cdb7173002ebb3967f4961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sshOut</field>
+        <id>3784951cdb7173002ebb3967f496190f</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>3b84951cdb7173002ebb3967f496192e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_3784951cdb7173002ebb3967f496190f</table>
+        <value>{{step[d7f26c6e-699e-4d79-b321-77e87422d0c5].output}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=3784951cdb7173002ebb3967f496190f^sys_idNOT IN3784951cdb7173002ebb3967f4961913"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sshOut</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">3784951cdb7173002ebb3967f496190f</model>
+        <model_id>3784951cdb7173002ebb3967f496190f</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_3784951cdb7173002ebb3967f496190f</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>3784951cdb7173002ebb3967f4961913</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=3784951cdb7173002ebb3967f496190f^sys_idNOT IN3b84951cdb7173002ebb3967f4961918"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=glide_date_time,uiTypeLabel=Date/Time</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>exparity</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">glide_date_time</internal_type>
+        <label>exparity</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">3784951cdb7173002ebb3967f496190f</model>
+        <model_id>3784951cdb7173002ebb3967f496190f</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_3784951cdb7173002ebb3967f496190f</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>3b84951cdb7173002ebb3967f4961918</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Check SSL Certificate Expiration Date">b7482cd4db3d33002ebb3967f4961979</action>
+        <cid>d7f26c6e-699e-4d79-b321-77e87422d0c5</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>SSH step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="SSH">761bdfa073332300673d94596bf6a72d</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:06</sys_created_on>
+        <sys_id>7f84951cdb7173002ebb3967f4961901</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:06</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7f84951cdb7173002ebb3967f4961901"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7f84951cdb7173002ebb3967f4961901</document_key>
+        <order>550</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>3b84951cdb7173002ebb3967f496190c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <value>2d20f2760a0006bc095bf17ae4e0d4ee</value>
+        <variable display_value="">37ddd72473332300673d94596bf6a781</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7f84951cdb7173002ebb3967f4961901</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>7384951cdb7173002ebb3967f496190d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">92bd572473332300673d94596bf6a7ff</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7f84951cdb7173002ebb3967f4961901</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>bf84951cdb7173002ebb3967f496190c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="">843b1fa073332300673d94596bf6a702</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7f84951cdb7173002ebb3967f4961901</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>fb84951cdb7173002ebb3967f496190c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <value>192.172.10.4</value>
+        <variable display_value="">952cdbe073332300673d94596bf6a7a7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7f84951cdb7173002ebb3967f4961901</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>ff84951cdb7173002ebb3967f496190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <value>a2167584db353300ddad4650399619b0</value>
+        <variable display_value="">5efc532473332300673d94596bf6a747</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=7f84951cdb7173002ebb3967f4961901"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>capabilities</field>
+        <id>7f84951cdb7173002ebb3967f4961901</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:06</sys_created_on>
+        <sys_id>7384951cdb7173002ebb3967f496190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:06</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>command</field>
+        <id>7f84951cdb7173002ebb3967f4961901</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>7f84951cdb7173002ebb3967f496190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value>echo Q | openssl s_client -connect {{action.url}}:443 2&gt;/dev/null | openssl x509 -noout -enddate</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection</field>
+        <id>7f84951cdb7173002ebb3967f4961901</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:06</sys_created_on>
+        <sys_id>f784951cdb7173002ebb3967f496190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:06</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>credential_alias</field>
+        <id>7f84951cdb7173002ebb3967f4961901</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:06</sys_created_on>
+        <sys_id>bb84951cdb7173002ebb3967f496190a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:06</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>host</field>
+        <id>7f84951cdb7173002ebb3967f4961901</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:06</sys_created_on>
+        <sys_id>3784951cdb7173002ebb3967f496190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:06</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>mid_application</field>
+        <id>7f84951cdb7173002ebb3967f4961901</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>bb84951cdb7173002ebb3967f496190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_input action="delete_multiple" query="model=b7482cd4db3d33002ebb3967f4961979^sys_idNOT IN678419d8db7173002ebb3967f4961991"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>url</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>url</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Check SSL Certificate Expiration Date">b7482cd4db3d33002ebb3967f4961979</model>
+        <model_id>b7482cd4db3d33002ebb3967f4961979</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_b7482cd4db3d33002ebb3967f4961979</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:06</sys_created_on>
+        <sys_id>678419d8db7173002ebb3967f4961991</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_step_instance action="delete_multiple" query="action=b7482cd4db3d33002ebb3967f4961979^sys_idNOT IN3784951cdb7173002ebb3967f496190f,7f84951cdb7173002ebb3967f4961901"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Check SSL Certificate Expiration Date">b7482cd4db3d33002ebb3967f4961979</action>
+        <cid>b8a4dfff-3d93-41ee-92c6-e279a1c4e4aa</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>3784951cdb7173002ebb3967f496190f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=3784951cdb7173002ebb3967f496190f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>3784951cdb7173002ebb3967f496190f</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>3384951cdb7173002ebb3967f4961921</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>3784951cdb7173002ebb3967f496190f</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>f384951cdb7173002ebb3967f4961921</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+str = inputs.sshOut;
+stringDate = str.split('=').pop();
+//var date = new GlideDate('stringDate');
+//outputs.exparity = date
+outputs.exparity = str.split('=').pop();
+})(inputs, outputs);</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=3784951cdb7173002ebb3967f496190f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>3784951cdb7173002ebb3967f496190f</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>fb84951cdb7173002ebb3967f4961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>3784951cdb7173002ebb3967f496190f</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>bf84951cdb7173002ebb3967f4961920</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sshOut</field>
+        <id>3784951cdb7173002ebb3967f496190f</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>3b84951cdb7173002ebb3967f496192e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_3784951cdb7173002ebb3967f496190f</table>
+        <value>{{step[d7f26c6e-699e-4d79-b321-77e87422d0c5].output}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=3784951cdb7173002ebb3967f496190f^sys_idNOT IN3784951cdb7173002ebb3967f4961913"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sshOut</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">3784951cdb7173002ebb3967f496190f</model>
+        <model_id>3784951cdb7173002ebb3967f496190f</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_3784951cdb7173002ebb3967f496190f</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>3784951cdb7173002ebb3967f4961913</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=3784951cdb7173002ebb3967f496190f^sys_idNOT IN3b84951cdb7173002ebb3967f4961918"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=glide_date_time,uiTypeLabel=Date/Time</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>exparity</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">glide_date_time</internal_type>
+        <label>exparity</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">3784951cdb7173002ebb3967f496190f</model>
+        <model_id>3784951cdb7173002ebb3967f496190f</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_3784951cdb7173002ebb3967f496190f</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>3b84951cdb7173002ebb3967f4961918</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Check SSL Certificate Expiration Date">b7482cd4db3d33002ebb3967f4961979</action>
+        <cid>d7f26c6e-699e-4d79-b321-77e87422d0c5</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>SSH step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="SSH">761bdfa073332300673d94596bf6a72d</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:06</sys_created_on>
+        <sys_id>7f84951cdb7173002ebb3967f4961901</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:06</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7f84951cdb7173002ebb3967f4961901"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7f84951cdb7173002ebb3967f4961901</document_key>
+        <order>550</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>3b84951cdb7173002ebb3967f496190c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <value>2d20f2760a0006bc095bf17ae4e0d4ee</value>
+        <variable display_value="">37ddd72473332300673d94596bf6a781</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7f84951cdb7173002ebb3967f4961901</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>7384951cdb7173002ebb3967f496190d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">92bd572473332300673d94596bf6a7ff</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7f84951cdb7173002ebb3967f4961901</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>bf84951cdb7173002ebb3967f496190c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="">843b1fa073332300673d94596bf6a702</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7f84951cdb7173002ebb3967f4961901</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>fb84951cdb7173002ebb3967f496190c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <value>192.172.10.4</value>
+        <variable display_value="">952cdbe073332300673d94596bf6a7a7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7f84951cdb7173002ebb3967f4961901</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>ff84951cdb7173002ebb3967f496190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <value>a2167584db353300ddad4650399619b0</value>
+        <variable display_value="">5efc532473332300673d94596bf6a747</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=7f84951cdb7173002ebb3967f4961901"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>capabilities</field>
+        <id>7f84951cdb7173002ebb3967f4961901</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:06</sys_created_on>
+        <sys_id>7384951cdb7173002ebb3967f496190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:06</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>command</field>
+        <id>7f84951cdb7173002ebb3967f4961901</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>7f84951cdb7173002ebb3967f496190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value>echo Q | openssl s_client -connect {{action.url}}:443 2&gt;/dev/null | openssl x509 -noout -enddate</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection</field>
+        <id>7f84951cdb7173002ebb3967f4961901</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:06</sys_created_on>
+        <sys_id>f784951cdb7173002ebb3967f496190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:06</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>credential_alias</field>
+        <id>7f84951cdb7173002ebb3967f4961901</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:06</sys_created_on>
+        <sys_id>bb84951cdb7173002ebb3967f496190a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:06</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>host</field>
+        <id>7f84951cdb7173002ebb3967f4961901</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:06</sys_created_on>
+        <sys_id>3784951cdb7173002ebb3967f496190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:06</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>mid_application</field>
+        <id>7f84951cdb7173002ebb3967f4961901</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:07</sys_created_on>
+        <sys_id>bb84951cdb7173002ebb3967f496190b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:07</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_b7482cd4db3d33002ebb3967f4961979^sys_idNOT INbf84551cdb7173002ebb3967f49619ff"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>url</element>
+        <help/>
+        <hint/>
+        <label>url</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_b7482cd4db3d33002ebb3967f4961979</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:06</sys_created_on>
+        <sys_id>bf84551cdb7173002ebb3967f49619ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>url</sys_name>
+        <sys_package display_value="Open SSL" source="x_snc_open_ssl">17a3e018dbf933002ebb3967f49619af</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_b7482cd4db3d33002ebb3967f4961979_url_en</sys_update_name>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=b7482cd4db3d33002ebb3967f4961979^sys_idNOT IN5db41d1cdb7173002ebb3967f496194b"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="Check SSL Certificate Expiration Date">b7482cd4db3d33002ebb3967f4961979</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"5db41d1cdb7173002ebb3967f496194b","name":"plan"}}</plan>
+        <snapshot>74b4d91cdb7173002ebb3967f496197a</snapshot>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>5db41d1cdb7173002ebb3967f496194b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:45</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_template/>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category display_value="Open SSL">8d38a8d4db3d33002ebb3967f49619bc</category>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>check_ssl_certificate_expiration_date</internal_name>
+        <label_cache>[{"name":"{{action.url}}","label":"action➛url","type":"action","ref":""},{"name":"{{step[d7f26c6e-699e-4d79-b321-77e87422d0c5].output}}","label":"step➛SSH step➛Output","type":"step","ref":""}]</label_cache>
+        <master>true</master>
+        <name>Check SSL Certificate Expiration Date</name>
+        <outputs/>
+        <parent_action display_value="Check SSL Certificate Expiration Date">b7482cd4db3d33002ebb3967f4961979</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>f8b4d91cdb7173002ebb3967f49619b8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=f8b4d91cdb7173002ebb3967f49619b8"/>
+    <sys_variable_value action="delete_multiple" query="document_key=f8b4d91cdb7173002ebb3967f49619b8"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=f8b4d91cdb7173002ebb3967f49619b8^sys_idNOT INfcb4d91cdb7173002ebb3967f49619bf,fcb4d91cdb7173002ebb3967f49619c9"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Check SSL Certificate Expiration Date">f8b4d91cdb7173002ebb3967f49619b8</action>
+        <cid>d7f26c6e-699e-4d79-b321-77e87422d0c5</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>SSH step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="SSH">761bdfa073332300673d94596bf6a72d</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>fcb4d91cdb7173002ebb3967f49619bf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=fcb4d91cdb7173002ebb3967f49619bf"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fcb4d91cdb7173002ebb3967f49619bf</document_key>
+        <order>550</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>38b4d91cdb7173002ebb3967f49619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <value>2d20f2760a0006bc095bf17ae4e0d4ee</value>
+        <variable display_value="">37ddd72473332300673d94596bf6a781</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fcb4d91cdb7173002ebb3967f49619bf</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>70b4d91cdb7173002ebb3967f49619c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">92bd572473332300673d94596bf6a7ff</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fcb4d91cdb7173002ebb3967f49619bf</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>74b4d91cdb7173002ebb3967f49619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <value>a2167584db353300ddad4650399619b0</value>
+        <variable display_value="">5efc532473332300673d94596bf6a747</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fcb4d91cdb7173002ebb3967f49619bf</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>bcb4d91cdb7173002ebb3967f49619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="">843b1fa073332300673d94596bf6a702</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fcb4d91cdb7173002ebb3967f49619bf</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>f8b4d91cdb7173002ebb3967f49619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <value>192.172.10.4</value>
+        <variable display_value="">952cdbe073332300673d94596bf6a7a7</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=fcb4d91cdb7173002ebb3967f49619bf"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>capabilities</field>
+        <id>fcb4d91cdb7173002ebb3967f49619bf</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>f4b4d91cdb7173002ebb3967f49619c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>command</field>
+        <id>fcb4d91cdb7173002ebb3967f49619bf</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>f0b4d91cdb7173002ebb3967f49619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value>echo Q | openssl s_client -connect {{action.url}}:443 2&gt;/dev/null | openssl x509 -noout -enddate</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection</field>
+        <id>fcb4d91cdb7173002ebb3967f49619bf</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>7cb4d91cdb7173002ebb3967f49619c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>credential_alias</field>
+        <id>fcb4d91cdb7173002ebb3967f49619bf</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>34b4d91cdb7173002ebb3967f49619c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>host</field>
+        <id>fcb4d91cdb7173002ebb3967f49619bf</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>b8b4d91cdb7173002ebb3967f49619c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>mid_application</field>
+        <id>fcb4d91cdb7173002ebb3967f49619bf</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>30b4d91cdb7173002ebb3967f49619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Check SSL Certificate Expiration Date">f8b4d91cdb7173002ebb3967f49619b8</action>
+        <cid>b8a4dfff-3d93-41ee-92c6-e279a1c4e4aa</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>fcb4d91cdb7173002ebb3967f49619c9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=fcb4d91cdb7173002ebb3967f49619c9"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fcb4d91cdb7173002ebb3967f49619c9</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>41b4d91cdb7173002ebb3967f49619da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+str = inputs.sshOut;
+stringDate = str.split('=').pop();
+//var date = new GlideDate('stringDate');
+//outputs.exparity = date
+outputs.exparity = str.split('=').pop();
+})(inputs, outputs);</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fcb4d91cdb7173002ebb3967f49619c9</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>8db4d91cdb7173002ebb3967f49619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=fcb4d91cdb7173002ebb3967f49619c9"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>fcb4d91cdb7173002ebb3967f49619c9</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>49b4d91cdb7173002ebb3967f49619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>fcb4d91cdb7173002ebb3967f49619c9</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>0db4d91cdb7173002ebb3967f49619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sshOut</field>
+        <id>fcb4d91cdb7173002ebb3967f49619c9</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>c9b4d91cdb7173002ebb3967f49619da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_fcb4d91cdb7173002ebb3967f49619c9</table>
+        <value>{{step[d7f26c6e-699e-4d79-b321-77e87422d0c5].output}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=fcb4d91cdb7173002ebb3967f49619c9^sys_idNOT IN78b4d91cdb7173002ebb3967f49619cc"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sshOut</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>sshOut</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">fcb4d91cdb7173002ebb3967f49619c9</model>
+        <model_id>fcb4d91cdb7173002ebb3967f49619c9</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_fcb4d91cdb7173002ebb3967f49619c9</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>78b4d91cdb7173002ebb3967f49619cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=fcb4d91cdb7173002ebb3967f49619c9^sys_idNOT INc1b4d91cdb7173002ebb3967f49619d2"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=glide_date_time,uiTypeLabel=Date/Time</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>exparity</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">glide_date_time</internal_type>
+        <label>exparity</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">fcb4d91cdb7173002ebb3967f49619c9</model>
+        <model_id>fcb4d91cdb7173002ebb3967f49619c9</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_fcb4d91cdb7173002ebb3967f49619c9</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>c1b4d91cdb7173002ebb3967f49619d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_action_input action="delete_multiple" query="model=f8b4d91cdb7173002ebb3967f49619b8^sys_idNOT INf8b4d91cdb7173002ebb3967f49619b9"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>url</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>url</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Check SSL Certificate Expiration Date">f8b4d91cdb7173002ebb3967f49619b8</model>
+        <model_id>f8b4d91cdb7173002ebb3967f49619b8</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_f8b4d91cdb7173002ebb3967f49619b8</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>f8b4d91cdb7173002ebb3967f49619b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_step_instance action="delete_multiple" query="action=f8b4d91cdb7173002ebb3967f49619b8^sys_idNOT INfcb4d91cdb7173002ebb3967f49619bf,fcb4d91cdb7173002ebb3967f49619c9"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Check SSL Certificate Expiration Date">f8b4d91cdb7173002ebb3967f49619b8</action>
+        <cid>d7f26c6e-699e-4d79-b321-77e87422d0c5</cid>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>SSH step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="SSH">761bdfa073332300673d94596bf6a72d</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>fcb4d91cdb7173002ebb3967f49619bf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=fcb4d91cdb7173002ebb3967f49619bf"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fcb4d91cdb7173002ebb3967f49619bf</document_key>
+        <order>550</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>38b4d91cdb7173002ebb3967f49619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <value>2d20f2760a0006bc095bf17ae4e0d4ee</value>
+        <variable display_value="">37ddd72473332300673d94596bf6a781</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fcb4d91cdb7173002ebb3967f49619bf</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>70b4d91cdb7173002ebb3967f49619c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">92bd572473332300673d94596bf6a7ff</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fcb4d91cdb7173002ebb3967f49619bf</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>74b4d91cdb7173002ebb3967f49619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <value>a2167584db353300ddad4650399619b0</value>
+        <variable display_value="">5efc532473332300673d94596bf6a747</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fcb4d91cdb7173002ebb3967f49619bf</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>bcb4d91cdb7173002ebb3967f49619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="">843b1fa073332300673d94596bf6a702</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fcb4d91cdb7173002ebb3967f49619bf</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>f8b4d91cdb7173002ebb3967f49619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <value>192.172.10.4</value>
+        <variable display_value="">952cdbe073332300673d94596bf6a7a7</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=fcb4d91cdb7173002ebb3967f49619bf"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>capabilities</field>
+        <id>fcb4d91cdb7173002ebb3967f49619bf</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>f4b4d91cdb7173002ebb3967f49619c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>command</field>
+        <id>fcb4d91cdb7173002ebb3967f49619bf</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>f0b4d91cdb7173002ebb3967f49619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value>echo Q | openssl s_client -connect {{action.url}}:443 2&gt;/dev/null | openssl x509 -noout -enddate</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>connection</field>
+        <id>fcb4d91cdb7173002ebb3967f49619bf</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>7cb4d91cdb7173002ebb3967f49619c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>credential_alias</field>
+        <id>fcb4d91cdb7173002ebb3967f49619bf</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>34b4d91cdb7173002ebb3967f49619c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>host</field>
+        <id>fcb4d91cdb7173002ebb3967f49619bf</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>b8b4d91cdb7173002ebb3967f49619c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>mid_application</field>
+        <id>fcb4d91cdb7173002ebb3967f49619bf</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>30b4d91cdb7173002ebb3967f49619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_761bdfa073332300673d94596bf6a72d</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Check SSL Certificate Expiration Date">f8b4d91cdb7173002ebb3967f49619b8</action>
+        <cid>b8a4dfff-3d93-41ee-92c6-e279a1c4e4aa</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>fcb4d91cdb7173002ebb3967f49619c9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=fcb4d91cdb7173002ebb3967f49619c9"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fcb4d91cdb7173002ebb3967f49619c9</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>41b4d91cdb7173002ebb3967f49619da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+str = inputs.sshOut;
+stringDate = str.split('=').pop();
+//var date = new GlideDate('stringDate');
+//outputs.exparity = date
+outputs.exparity = str.split('=').pop();
+})(inputs, outputs);</value>
+        <variable display_value="">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>fcb4d91cdb7173002ebb3967f49619c9</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>8db4d91cdb7173002ebb3967f49619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=fcb4d91cdb7173002ebb3967f49619c9"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>fcb4d91cdb7173002ebb3967f49619c9</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>49b4d91cdb7173002ebb3967f49619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>fcb4d91cdb7173002ebb3967f49619c9</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>0db4d91cdb7173002ebb3967f49619d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sshOut</field>
+        <id>fcb4d91cdb7173002ebb3967f49619c9</id>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>c9b4d91cdb7173002ebb3967f49619da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_fcb4d91cdb7173002ebb3967f49619c9</table>
+        <value>{{step[d7f26c6e-699e-4d79-b321-77e87422d0c5].output}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=fcb4d91cdb7173002ebb3967f49619c9^sys_idNOT IN78b4d91cdb7173002ebb3967f49619cc"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sshOut</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>sshOut</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">fcb4d91cdb7173002ebb3967f49619c9</model>
+        <model_id>fcb4d91cdb7173002ebb3967f49619c9</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_fcb4d91cdb7173002ebb3967f49619c9</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>78b4d91cdb7173002ebb3967f49619cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=fcb4d91cdb7173002ebb3967f49619c9^sys_idNOT INc1b4d91cdb7173002ebb3967f49619d2"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=glide_date_time,uiTypeLabel=Date/Time</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>exparity</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">glide_date_time</internal_type>
+        <label>exparity</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">fcb4d91cdb7173002ebb3967f49619c9</model>
+        <model_id>fcb4d91cdb7173002ebb3967f49619c9</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_fcb4d91cdb7173002ebb3967f49619c9</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>c1b4d91cdb7173002ebb3967f49619d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_f8b4d91cdb7173002ebb3967f49619b8^sys_idNOT IN34b4d91cdb7173002ebb3967f49619be"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>url</element>
+        <help/>
+        <hint/>
+        <label>url</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_f8b4d91cdb7173002ebb3967f49619b8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>patrick.beauchemin</sys_created_by>
+        <sys_created_on>2019-05-29 15:25:44</sys_created_on>
+        <sys_id>34b4d91cdb7173002ebb3967f49619be</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>url</sys_name>
+        <sys_package display_value="Open SSL" source="x_snc_open_ssl">17a3e018dbf933002ebb3967f49619af</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Open SSL">17a3e018dbf933002ebb3967f49619af</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_f8b4d91cdb7173002ebb3967f49619b8_url_en</sys_update_name>
+        <sys_updated_by>patrick.beauchemin</sys_updated_by>
+        <sys_updated_on>2019-05-29 15:25:44</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+</record_update>
